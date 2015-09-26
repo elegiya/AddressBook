@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="AddressBook\AddressBook\AddressBook.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AddressBook\AddressBook.Droid\Services\Database\SQLite_Android.cs">
+    <Files>
+      <File FileName="AddressBook\AddressBook.Droid\Services\Database\SQLite_Android.cs" Line="20" Column="37" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
