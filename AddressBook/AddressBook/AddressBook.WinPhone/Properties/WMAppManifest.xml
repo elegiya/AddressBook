@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{11248719-e745-47ed-80db-7c32ac979113}" Title="AddressBook.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="AddressBook.WinPhone author" Description="Sample description" Publisher="AddressBook.WinPhone" PublisherID="{149389a3-235d-4ca9-8e26-47b2e05c1b40}">
+  <App xmlns="" ProductID="{d5bd4150-0ecf-42b0-bfe6-ce40fb9867df}" Title="AddressBook.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="AddressBook.WinPhone author" Description="Sample description" Publisher="AddressBook.WinPhone" PublisherID="{cb395842-bc4e-46ca-ae8c-5784c80c41e8}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
