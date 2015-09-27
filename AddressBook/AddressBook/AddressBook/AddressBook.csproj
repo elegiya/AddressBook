@@ -41,6 +41,13 @@
     <Compile Include="Services\Contacts\ContactService.cs" />
     <Compile Include="Services\Contacts\IContactService.cs" />
     <Compile Include="Services\Database\ISQLite.cs" />
+    <Compile Include="ViewModels\AddContactViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\AllContactsViewModel.cs" />
+    <Compile Include="ViewModels\DetailedContactViewModel.cs" />
+    <Compile Include="Views\AddContactPage.xaml.cs">
+      <DependentUpon>AddContactPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AllContactsPage.xaml.cs">
       <DependentUpon>AllContactsPage.xaml</DependentUpon>
     </Compile>
@@ -70,9 +77,7 @@
     <None Include="GettingStarted.Xamarin" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Views\AllContactsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -81,6 +86,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\DetailedInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\AddContactPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

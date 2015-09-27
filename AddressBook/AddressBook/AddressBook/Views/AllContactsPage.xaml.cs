@@ -17,6 +17,7 @@ namespace AddressBook.Views
         {
             InitializeComponent();
             _contactService = new ContactService();
+            contactList.ItemTapped += OnContactListTapped;
         }
 
         protected override void OnAppearing()
@@ -36,7 +37,19 @@ namespace AddressBook.Views
 
         private async void OnContactItemClick(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DetailedInfoPage());
+            await Navigation.PushAsync(new AddContactPage());
+        }
+
+        private async void OnContactListTapped(object sender, EventArgs e)
+        {
+            var id = _contactService.GetIdByName(((ListView)sender).SelectedItem.ToString());
+
+            var nextPage=new DetailedInfoPage()
+            {
+                ContactId = id
+            };
+
+            await Navigation.PushAsync(nextPage);
         }
     }
 }

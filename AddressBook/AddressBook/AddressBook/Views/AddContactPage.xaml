@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:AddressBook.Models;assembly=AddressBook"
+             x:Class="AddressBook.Views.AddContactPage">
+  <StackLayout>
+    <StackLayout.BindingContext>
+      <models:Contacts />
+    </StackLayout.BindingContext>
+  
+    <Label Text="Name" />
+    <Entry x:Name="nameEntry" />
+  
+    <Label Text="Mobile" />
+    <Entry x:Name="mobileEntry" Keyboard="Numeric" />
+  
+    <Label Text="Work" />
+    <Entry x:Name="workEntry" Keyboard="Numeric" />
+
+    <Label Text="Main" />
+    <Entry x:Name="mainEntry" Keyboard="Numeric" /> <!-- Text="{Binding Main}" />-->
+
+    <Button x:Name="addContactButton" Text="Save" />
+          <!--Command="{Binding ChooseDigitCommand}" CommandParameter="7" />-->
+  </StackLayout>
+</ContentPage>

@@ -31,25 +31,18 @@ namespace AddressBook.Services.Contacts
             return _connection.Table<Models.Contacts>().Where(c => c.Id == id).First();
         }
 
+        public int GetIdByName(string name)
+        {
+            return _connection.Table<Models.Contacts>().Where(c => c.Name == name).First()?.Id ?? 0;
+        }
+
         public void Add(Models.Contacts contact)
         {
-            //var newContact = new Models.Contacts
-            //{
-            //    Name = contact.Name,
-            //    Mobile = contact.Mobile,
-            //    Work = contact.Work,
-            //    Main = contact.Main
-            //};
             _connection.Insert(contact);
         }
 
         public void Update(Models.Contacts contact)
         {
-            //var newContact = _connection.Table<Models.Contacts>().Where(c => c.Id == contact.Id).First();
-            //newContact.Name = contact.Name;
-            //newContact.Mobile = contact.Mobile;
-            //newContact.Work = contact.Work;
-            //newContact.Main = contact.Main;
             _connection.Update(contact);
         }
 

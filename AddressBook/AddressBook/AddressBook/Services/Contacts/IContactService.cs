@@ -12,6 +12,8 @@ namespace AddressBook.Services.Contacts
 
         Models.Contacts GetById(int id);
 
+        int GetIdByName(string name);
+
         void Add(Models.Contacts contact);
 
         void Update(Models.Contacts contact);

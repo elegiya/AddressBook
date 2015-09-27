@@ -1,13 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:AddressBook.ViewModels;assembly=AddressBook"
              x:Class="AddressBook.Views.DetailedInfoPage"
              Title="All Contacts">
 
-  <StackLayout>
-    <Button x:Name="sendMessage" Text="Send Message" />
-    <Button x:Name="shareContact" Text="Share Contact" />
-    <Button x:Name="addToFavorites" Text="Add to Favorites" />
-  </StackLayout>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem x:Name="detailedContactItem" Text="Edit" />
+  </ContentPage.ToolbarItems>
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="BaseStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="Blue" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
   
+<Grid>
+  <Grid.BindingContext>
+    <viewModels:DetailedContactViewModel /> 
+  </Grid.BindingContext>
+
+  <Grid.RowDefinitions>
+    <RowDefinition Height="*" />
+    <RowDefinition Height="*" />
+    <RowDefinition Height="*" />
+    <RowDefinition Height="*" />
+    <RowDefinition Height="*" />
+    <RowDefinition Height="*" />
+  </Grid.RowDefinitions>
+
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="*" />
+    <ColumnDefinition Width="*" />
+  </Grid.ColumnDefinitions>
+
+  <Label x:Name="nameValueLabel" Text="{Binding Name}" Grid.Row="0" Grid.Column="0"
+         Grid.ColumnSpan="2"/>
+  
+  <Label x:Name="mobileLabel" Text="Mobile" Grid.Row="1" Grid.Column="0" />
+  <Label x:Name="mobileValueLabel" Text="{Binding Mobile}" Grid.Row="1" Grid.Column="1" 
+         Style="{DynamicResource BaseStyle}" />
+  
+  <Label x:Name="workLabel" Text="Work" Grid.Row="2" Grid.Column="0" />
+  <Label x:Name="workValueLabel" Text="{Binding Work}" Grid.Row="2" Grid.Column="1" 
+         Style="{DynamicResource BaseStyle}" />
+  
+  <Label x:Name="mainLabel" Text="Main" Grid.Row="3" Grid.Column="0" />
+  <Label x:Name="mainValueLabel" Text="{Binding Main}" Grid.Row="3" Grid.Column="1" 
+         Style="{DynamicResource BaseStyle}" />
+  
+    <Button x:Name="sendMessage" Text="Send Message" Grid.Row="4" Grid.Column="0"
+         Grid.ColumnSpan="2" />
+    <Button x:Name="shareContact" Text="Share Contact" Grid.Row="5" Grid.Column="0"
+         Grid.ColumnSpan="2" />
+    <Button x:Name="addToFavorites" Text="Add to Favorites" Grid.Row="6" Grid.Column="0"
+         Grid.ColumnSpan="2" />
+</Grid>
 </ContentPage>
